@@ -8,18 +8,27 @@ namespace HelloWorld
     {
         public void Run()
         {
-            float health = 100.0f;
-            float healthRegen = 20;
-            string name = Console.ReadLine();
-            bool maxLevelReached = false;
+            string name, motto;
+            float maxHealth = 100;
+            float health = maxHealth;
             int maxLevel = 100;
             int level = 1;
             bool ready = false;
+            bool dead = false;
 
-            Console.WriteLine(health);
-            health = health + healthRegen;
-            Console.WriteLine(name + "just healed " + healthRegen + " health");
+            Console.Write("Greetings! What is your name? ");
+            name = Console.ReadLine();
 
+            Console.Write("That's a spectacular name, " + name + "! I'm curious though... What words do you live your life by? What is your motto? ");
+            motto = Console.ReadLine();
+
+            Console.WriteLine("Wise words indeed! Now that I know who you are, let me tell you about yourself.");
+            Console.WriteLine("Name:   " + name);
+            Console.WriteLine("Motto:  " + motto);
+            Console.WriteLine("Health: " + health);
+            Console.WriteLine("Level:  " + level);
+
+            ready = true;
         }
     }
 }
